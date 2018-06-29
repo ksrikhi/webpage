@@ -22,6 +22,5 @@
         </v-card-actions>
       </v-card>
     </v-flex>
-  </v-layout>
-
+  </v-layout>  
 </template>

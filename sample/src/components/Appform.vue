@@ -1,45 +1,59 @@
-    <template>
-  
-  <form>
-      <H1>this is user form</H1>
-    <v-text-field
-      v-model="name"
-      :error-messages="nameErrors"
-      :counter="10"
-      label="Name"
-      required
-      @input="$v.name.$touch()"
-      @blur="$v.name.$touch()"
-    ></v-text-field>
-    <v-text-field
-      v-model="email"
-      :error-messages="emailErrors"
-      label="E-mail"
-      required
-      @input="$v.email.$touch()"
-      @blur="$v.email.$touch()"
-    ></v-text-field>
-    <v-select
-      v-model="select"
-      :items="items"
-      :error-messages="selectErrors"
-      label="Item"
-      required
-      @change="$v.select.$touch()"
-      @blur="$v.select.$touch()"
-    ></v-select>
-    <v-checkbox
-      v-model="checkbox"
-      :error-messages="checkboxErrors"
-      label="Do you agree?"
-      required
-      @change="$v.checkbox.$touch()"
-      @blur="$v.checkbox.$touch()"
-    ></v-checkbox>
+<template>
+  <v-layout mt-5>
+    <v-flex xs10 sm8 offset-sm2>
+      <v-card>
+        <v-container fluid>
+          <v-text-field
+      v-model="value"
+      color="black"
+      label="Username"
+      placeholder="Enter your name" 
+      loading
+    >
+      <v-progress-linear
+        v-if="custom"
+        slot="progress"
+        :value="progress"
+        :color="color"
+        height="7"
+      ></v-progress-linear>
+        </v-text-field>
 
-    <v-btn @click="submit">submit</v-btn>
-    <v-btn @click="clear">clear</v-btn>
-  </form>
+        <v-text-field
+      v-model="value"
+      color="black"
+      label="Email"
+      placeholder="Enter your email"
+      loading
+    >
+      <v-progress-linear
+        v-if="custom"
+        slot="progress"
+        :value="progress"
+        :color="color"
+        height="7"
+      ></v-progress-linear>
+        </v-text-field>
+
+        <v-text-field 
+      v-model="value"
+      color="black"
+     label="Password" 
+      placeholder="Enter your pasdsword"
+      loading
+    >
+      <v-progress-linear
+        v-if="custom"
+        slot="progress"
+        :value="progress"
+        :color="color"
+        height="7"
+      ></v-progress-linear>
+        </v-text-field>
+     <v-btn color="green" type="Submit">Submit</v-btn>
+  </v-container>
+     
+      </v-card>
+    </v-flex>
+  </v-layout>
 </template>
-
-

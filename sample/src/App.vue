@@ -3,8 +3,7 @@
     <upper></upper>
     <router-view/>
     <Appfooter></Appfooter>
-    
-  </div>
+    </div>
 </template>
 
 <script>

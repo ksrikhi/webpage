@@ -9,7 +9,7 @@
 <script>
   export default {
     data () {
-      return {
+    return {
         items: [
           {
             src: 'https://vuetifyjs.com/static/doc-images/carousel/squirrel.jpg'

@@ -1,6 +1,15 @@
 <template>
   <v-toolbar color="indigo" dark>
-    <v-toolbar-side-icon></v-toolbar-side-icon>
+    <v-menu offset-y>
+       <v-btn flat slot="activator" >
+      <v-icon > dashboard</v-icon></v-btn>
+      <v-list>
+        <v-list-tile v-for="(item, index) in items" :key="index" >
+          <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+        </v-list-tile>
+      </v-list>
+    </v-menu>
+    <!-- <v-toolbar-side-icon ></v-toolbar-side-icon> -->
     <router-link to="/">
       <v-toolbar-title class="white--text">Dashboard</v-toolbar-title>
       </router-link>
@@ -14,7 +23,7 @@
 
     <div class="hidden-sm-and-down">
       <router-link to="/form">
-       <v-btn flat>About</v-btn>
+       <v-btn flat>Register</v-btn>
       </router-link>
       <router-link to="/Contact">
        <v-btn flat>Contact</v-btn>
@@ -27,9 +36,8 @@
 
        
    <div class="hidden-md-and-up">
- 
-  <v-navigation-drawer permanent>
-    <v-toolbar flat>
+ <v-navigation-drawer permanent>
+  <v-toolbar flat>
       <v-list>
         <v-list-tile>
           <v-list-tile-title class="title">
@@ -60,9 +68,12 @@
       return {
         items: [
           { title: 'Home', icon: 'dashboard' },
-          { title: 'About', icon: 'question_answer' }
+          { title: 'About', icon: 'question_answer' },
+          { title: 'gallery', icon: 'question_answer' },
+          { title: 'users', icon: 'question_answer' }
         ],
-        right: null
+       
+        right: null,
       }
     }
   }
