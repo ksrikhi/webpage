@@ -24,7 +24,7 @@
      <v-btn color="green" type="Submit">Submit</v-btn>
      </v-form>
     </v-container>
-</div>
+  </div>
 </template>
 
 <script>
@@ -32,17 +32,17 @@ export default {
   data () {
     return {
       email: null,
-      Password : null ,
-      alert : false
+      Password: null,
+      alert: false
     }
   },
   methods: {
-      submit () {
-          if (!this.email && !this.Password) {
-             this.alert = true 
-            }
-          console.log('${this.email} and ${this.password}') 
+    submit () {
+      if (!this.email && !this.Password) {
+        this.alert = true
       }
+      console.log(`${this.email} and ${this.password}`)
+    }
   }
 }
-  </script>
+</script>

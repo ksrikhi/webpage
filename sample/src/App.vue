@@ -2,14 +2,15 @@
   <div>
     <upper></upper>
     <router-view/>
+    <Apptext></Apptext>
     <Appfooter></Appfooter>
     </div>
 </template>
 
 <script>
 import upper from './components/upper'
+import Apptext from './components/Apptext'
 import Appfooter from './components/Appfooter'
-import Apphome from '@/components/Apphome'
 export default {
   name: 'app',
   data () {
@@ -18,6 +19,7 @@ export default {
   },
   components: {
     upper,
+    Apptext,
     Appfooter
   }
 }

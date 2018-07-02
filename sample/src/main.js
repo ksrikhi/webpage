@@ -8,10 +8,11 @@ import 'vuetify/dist/vuetify.min.css'
 
 Vue.config.productionTip = false
 Vue.use(Vuetify)
-new Vue({
-    el: '#app',
-    router,
-    components: { App },
-    template: '<App/>'
-
+let app = new Vue({
+  el: '#app',
+  router,
+  components: { App },
+  template: '<App/>'
 })
+
+app.$mount()
